@@ -20,7 +20,9 @@
             color: #ffffff;
         }
         header {
-            background-color: #D2B48C;
+            background-image: url('data/img/banner_devonico.png');
+            background-size: cover;
+            background-position: center;
             color: white;
             padding: 15px;
             text-align: center;
@@ -51,22 +53,28 @@
         }
     </style>
 </head>
-<body class="light-theme">
+<body class="dark-theme">
 
 <header>
     <h1>Análisis Paleontológico Comparativo</h1>
 </header>
 
-<div class="toggle-theme" onclick="toggleTheme()">Cambiar a Tema Oscuro</div>
+<div class="toggle-theme" onclick="toggleTheme()">Tema Claro</div>
 
 <nav>
+    <button onclick="showContent('Sobre')">Sobre el Proyecto</button>
     <button onclick="showContent('objetivos')">Objetivos</button>
     <button onclick="showContent('datos')">Datos</button>
     <button onclick="showContent('resumen')">Resumen del Análisis</button>
     <button onclick="showContent('conclusiones')">Conclusiones</button>
 </nav>
 
-<div id="objetivos" class="content active">
+<div id="Sobre" class="content active">
+    <h2>Sobre el Proyecto</h2>
+    <p>Lo que nos inspiró fue:</p>
+</div>
+
+<div id="objetivos" class="content">
     <h2>Objetivos</h2>
     <ol>
         <li>¿Cuáles son las especies fósiles más comunes en cada una de las tres regiones (Chile, Argentina y Antártida)?</li>
@@ -94,7 +102,6 @@
         <li><b>Formato de exportación:</b> Archivos CSV (<i>Comma-separated values</i>) con todos los parámetros disponibles (<i>Show all available parameters</i>) para maximizar la información recolectada.</li>
         <li><b>Visualización del procedimiento:</b> La interfaz utilizada para la recolección de datos muestra un diseño enfocado en usabilidad para seleccionar fósiles relevantes.</li>
     </ol>
-    <img src="data/img/downloadbio.png" alt="download base" width="600" style="display: block; margin: 20px auto;">
     <h3>Preparación de datos</h3>
     <ol>
         <li><b>Revisión inicial:</b> Los datos descargados fueron revisados para eliminar duplicados y registros con información faltante en las variables clave:
@@ -117,7 +124,6 @@
             </ul>
         </li>
     </ol>
-    <img src="data/img/ejemplosuberas.png" alt="ejemplo subera" width="600" style="display: block; margin: 20px auto;">
 </div>
 
 <div id="resumen" class="content">
@@ -127,16 +133,13 @@
 
 <div id="conclusiones" class="content">
     <h2>Conclusiones</h2>
-    <p>La biodiversidad fósil de Chile, Argentina y Antártida refleja una historia evolutiva influenciada por factores ambientales, geológicos y climáticos. Las diferencias en ambientes, diversidad taxonómica y distribución espacial resaltan la singularidad de cada región, aunque persisten conexiones en niveles taxonómicos más amplios, particularmente entre Chile y Argentina.
-        El análisis temporal muestra que eras como el Neogene y Paleogene fueron clave para la diversificación de los ecosistemas fósiles, mientras que otras, como el Triassic y el Ordovician, estuvieron marcadas por una menor riqueza. En conjunto, los patrones observados destacan la complejidad de la evolución biológica y ecológica en el hemisferio sur, ofreciendo una base sólida para futuros estudios sobre la historia natural de estas regiones.</p>
+    <p>La biodiversidad fósil de Chile, Argentina y Antártida refleja una historia evolutiva influenciada por factores ambientales, geológicos y climáticos...</p>
 </div>
 
 <script>
     function showContent(tab) {
         const contents = document.querySelectorAll('.content');
-        contents.forEach(content => {
-            content.classList.remove('active');
-        });
+        contents.forEach(content => content.classList.remove('active'));
         document.getElementById(tab).classList.add('active');
     }
 
@@ -144,8 +147,9 @@
         document.body.classList.toggle('dark-theme');
         document.body.classList.toggle('light-theme');
         const themeButton = document.querySelector('.toggle-theme');
-        themeButton.textContent = document.body.classList.contains('dark-theme') ? 
-            'Cambiar a Tema Claro' : 'Cambiar a Tema Oscuro';
+        themeButton.textContent = document.body.classList.contains('dark-theme') 
+            ? 'Cambiar a Tema Claro' 
+            : 'Cambiar a Tema Oscuro';
     }
 </script>
 </body>
