@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Paleontológico</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .light-theme {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .dark-theme {
+            background-color: #222222;
+            color: #ffffff;
+        }
+        header {
+            background-image: url('data/img/banner.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .content {
+            padding: 20px;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .toggle-theme {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+
+<header>
+    <h1>Análisis Paleontológico Comparativo y Geográfico de Fósiles entre Chile, Argentina y la Antártida </h1>
+</header>
+
+<div class="toggle-theme" onclick="toggleTheme()">Tema Claro</div>
+
+<nav>
+    <button onclick="showContent('Sobre')">Sobre el Proyecto</button>
+    <button onclick="showContent('objetivos')">Objetivos</button>
+    <button onclick="showContent('datos')">Datos</button>
+    <button onclick="showContent('resumen')">Resumen del Análisis</button>
+    <button onclick="showContent('conclusiones')">Conclusiones</button>
+</nav>
+
+<div id="Sobre" class="content active">
+    <h2>Sobre el Proyecto</h2>
+    <p>La  paleontología  es  una  disciplina  científica  que  estudia  la  historia  de  la  vida  en  la  Tierra  a 
+        través de los fósiles, proporcionando una ventana única hacia los ecosistemas y la 
+        biodiversidad  de  épocas  pasadas.  En  regiones  como  Chile,  Argentina  y  la  Antártida,  los 
+        hallazgos  fósiles  ofrecen  una  oportunidad  invaluable  para  estudiar  la  evolución  de  las 
+        especies y los ecosistemas.  </p>
+    <p>Según Alexander Vargas, director de la Red Paleontológica de la Universidad de Chile, en un 
+        reportaje de La Tercera, Chile posee episodios únicos en la evolución del planeta, dados por 
+        su geografía, que aún permanecen en gran parte sin ser revelados. Sin embargo, a pesar de 
+        la relevancia científica de estos hallazgos, la paleontología ha sido un área del conocimiento 
+        subestimada en Chile, tanto a nivel académico como en términos de inversión en 
+        investigación.
+        <a href="https://www.latercera.com/que-pasa/noticia/por-que-chile-es-considerado-la-pieza-faltante-de-la-paleontologia-mundial/7OB7YAYGWJBERHAHYV5H6XQZHA/" rel="external nofollow noopener" target="_blank">Reportaje</a>
+    </p>
+    <p>Una de las bases fundamentales de este proyecto es la teoría de la deriva continental, la cual 
+        sostiene que los continentes actuales no siempre han estado en las mismas posiciones. Hace 
+        millones de años, Sudamérica, la Antártida y otras regiones formaban parte del 
+        supercontinente Gondwana. A medida que estos enormes bloques de tierra se desplazaban 
+        sobre la superficie terrestre, las especies que los habitaban también migraban y se adaptaban 
+        a los cambios geográficos y climáticos</p>
+    <p>Los fósiles encontrados en Chile, Argentina y la Antártida nos brindan una oportunidad única 
+        para estudiar cómo estaba conectada la vida entre estas regiones en el pasado. Al identificar 
+        y analizar estos fósiles, podemos reconstruir la historia de cómo especies como dinosaurios, 
+        plantas o moluscos migraron y evolucionaron en respuesta a los movimientos tectónicos. Este 
+        análisis nos permitirá entender mejor los patrones biogeográficos y las conexiones ecológicas 
+        entre estas áreas durante diferentes períodos geológicos.</p>
+    <p>El propósito de este análisis es generar un mejor entendimiento de los patrones 
+        biogeográficos y evolutivos de estas regiones, además los resultados podrían servir para:</p>
+        <ol>
+            <li>Identificar conexiones geológicas y biológicas entre las tres regiones durante distintos 
+                periodos geológicos.</li>
+            <li>Contribuir a la conservación del patrimonio fósil y generar conciencia  sobre la 
+                importancia de preservar las áreas ricas en fósiles.</li>
+            <li>Apoyar  la  educación  paleontológica,  ofreciendo  datos  visualizados  que  pueden  ser 
+                utilizados para ilustrar la evolución y los cambios en la biodiversidad de estas regiones.</li>
+        </ol>
+</div>
+
+<div id="objetivos" class="content">
+    <h2>Objetivos</h2>
+    <p>Realizar un análisis comparativo y geográfico de la diversidad de fósiles en Chile, 
+        Argentina y la Antártida, además de entender cómo ha evolucionado la distribución de 
+        las especies fósiles a lo largo del tiempo en estas regiones.</p>
+    <p>Objetivos específicos:</p>
+    <ol>
+        <li>Identificar y comparar las especies fósiles más comunes en cada región.</li>
+        <li>Analizar las diferencias y similitudes en  la  diversidad fósil entre las tres áreas 
+            geográficas.</li>
+        <li>Evaluar cómo ha cambiado la distribución de especies fósiles a lo largo del tiempo en 
+            cada región. </li>
+        <li>Explorar  similitudes  entre  la  distribución  de  especies  fósiles  en  las  costas  de  chile  y 
+            argentina durante ciertos periodos geológicos.</li>
+        <li>Examinar la  relación entre los hábitos alimenticios de las especies fósiles y la 
+            estructura ecológica de estas regiones a lo largo del tiempo.</li>
+    </ol>
+    <h2>Preguntas de investigación</h2>
+    <ol>
+        <li>¿Cuáles son las especies fósiles más comunes en cada una de las tres regiones (Chile, Argentina y Antártida)?</li>
+        <li>¿Qué diferencias y similitudes existen en la biodiversidad fósil entre estas regiones a lo largo de diferentes eras geológicas?</li>
+        <li>¿Cómo varía la distribución de especies fósiles a lo largo del tiempo en cada región?</li>
+        <li>¿Existen similitudes en la distribución de especies fósiles entre las costas de Chile y Argentina durante períodos geológicos específicos?</li>
+        <li>¿Cómo se distribuyen las especies fósiles en Chile según sus hábitos alimenticios y ubicación geográfica?</li>
+    </ol>
+</div>
+
+<div id="datos" class="content">
+    <h2>Datos</h2>
+    <h3>Fuente</h3>
+    <p>Los datos utilizados en este proyecto provienen de la plataforma <b>Paleobiology Database (PBDB)</b>, una base de datos colaborativa y abierta que recopila información sobre fósiles a nivel global. Esta plataforma es una de las más completas para estudios paleontológicos y permite explorar aspectos relacionados con la biodiversidad a lo largo del tiempo geológico.</p>
+    <img src="data/img/paleobio.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
+    
+<div id="resumen" class="content">
+    <h2>Resumen del Análisis</h2>
+    <p>El proyecto analiza la paleontología en Chile, Argentina y la Antártida, explorando cómo la deriva continental ha influido en la migración y adaptación de especies a lo largo del tiempo. A través del estudio de fósiles, se busca reconstruir la historia biogeográfica de estas regiones.</p>
+</div>
+
+<div id="conclusiones" class="content">
+    <h2>Conclusiones</h2>
+    <p>La biodiversidad fósil de Chile, Argentina y Antártida refleja una historia evolutiva influenciada por factores ambientales, geológicos y climáticos. Las diferencias en ambientes, diversidad taxonómica y distribución espacial resaltan la singularidad de cada región, aunque persisten conexiones en niveles taxonómicos más amplios, particularmente entre Chile y Argentina.<p>
+    <p>El análisis temporal muestra que eras como el Neogene y Paleogene fueron clave para la diversificación de los ecosistemas fósiles, mientras que otras, como el Triassic y el Ordovician, estuvieron marcadas por una menor riqueza. En conjunto, los patrones observados destacan la complejidad de la evolución biológica y ecológica en el hemisferio sur, ofreciendo una base sólida para futuros estudios sobre la historia natural de estas regiones.<p>
+
+</div>
+
+<script>
+    function showContent(tab) {
+        const contents = document.querySelectorAll('.content');
+        contents.forEach(content => content.classList.remove('active'));
+        document.getElementById(tab).classList.add('active');
+    }
+
+    function toggleTheme() {
+        document.body.classList.toggle('dark-theme');
+        document.body.classList.toggle('light-theme');
+        const themeButton = document.querySelector('.toggle-theme');
+        themeButton.textContent = document.body.classList.contains('dark-theme') 
+            ? 'Cambiar a Tema Claro' 
+            : 'Cambiar a Tema Oscuro';
+    }
+</script>
+</body>
+</html>
