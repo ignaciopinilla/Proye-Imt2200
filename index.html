@@ -56,7 +56,7 @@
 <body class="dark-theme">
 
 <header>
-    <h1>Análisis Paleontológico Comparativo</h1>
+    <h1>Análisis Paleontológico Comparativo y Geográfico de Fósiles entre Chile, Argentina y la Antártida </h1>
 </header>
 
 <div class="toggle-theme" onclick="toggleTheme()">Tema Claro</div>
@@ -140,42 +140,7 @@
     <h3>Fuente</h3>
     <p>Los datos utilizados en este proyecto provienen de la plataforma <b>Paleobiology Database (PBDB)</b>, una base de datos colaborativa y abierta que recopila información sobre fósiles a nivel global. Esta plataforma es una de las más completas para estudios paleontológicos y permite explorar aspectos relacionados con la biodiversidad a lo largo del tiempo geológico.</p>
     <img src="data/img/paleobio.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
-    <h3>Procedimientos de recolección</h3>
-    <ol>
-        <li><b>Fuente de descarga:</b> Utilizamos el apartado <i>Download</i> de PBDB, seleccionando la opción <code>Occurrences</code> para obtener datos de ubicación de fósiles.</li>
-        <li><b>Filtros aplicados:</b> 
-            <ul>
-                <li>Regiones geográficas: Chile, Argentina y la Antártida.</li>
-                <li>Todos los períodos geológicos.</li>
-            </ul>
-        </li>
-        <li><b>Formato de exportación:</b> Archivos CSV (<i>Comma-separated values</i>) con todos los parámetros disponibles (<i>Show all available parameters</i>) para maximizar la información recolectada.</li>
-        <li><b>Visualización del procedimiento:</b> La interfaz utilizada para la recolección de datos muestra un diseño enfocado en usabilidad para seleccionar fósiles relevantes.</li>
-    </ol>
-    <h3>Preparación de datos</h3>
-    <ol>
-        <li><b>Revisión inicial:</b> Los datos descargados fueron revisados para eliminar duplicados y registros con información faltante en las variables clave:
-            <ul>
-                <li>Coordenadas geográficas (<code>lat</code>, <code>lng</code>).</li>
-                <li>Clasificación taxonómica (<code>family</code>, <code>genus</code>, <code>species</code>, etc.).</li>
-                <li>Ambiente (<code>environment</code>).</li>
-            </ul>
-        </li>
-        <li><b>Transformación de variables:</b>
-            <ul>
-                <li>Clasificación de los registros por períodos geológicos (<code>early_interval</code>, <code>late_interval</code>).</li>
-                <li>Creación de nuevas variables derivadas, como <code>diet</code>, que clasifica a las especies por hábitos alimenticios (carnívoros, herbívoros, etc.).</li>
-            </ul>
-        </li>
-        <li><b>Agrupación de sub-eras en eras generales:</b>
-            <ul>
-                <li>Por ejemplo, <i>Upper Permian</i> y <i>Lower Permian</i> se agruparon bajo <b>Permian</b>.</li>
-                <li>Este agrupamiento permite identificar patrones temporales más claros en las especies fósiles.</li>
-            </ul>
-        </li>
-    </ol>
-</div>
-
+    
 <div id="resumen" class="content">
     <h2>Resumen del Análisis</h2>
     <p>El proyecto analiza la paleontología en Chile, Argentina y la Antártida, explorando cómo la deriva continental ha influido en la migración y adaptación de especies a lo largo del tiempo. A través del estudio de fósiles, se busca reconstruir la historia biogeográfica de estas regiones.</p>
