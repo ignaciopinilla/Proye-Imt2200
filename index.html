@@ -250,42 +250,35 @@
     <p>La comparación entre las costas de Chile y Argentina revela ecosistemas costeros evolutivamente independientes, con características únicas y solo algunas similitudes. Este análisis destaca cómo factores geográficos, climáticos y tectónicos han moldeado la biodiversidad fósil de ambas regiones, proporcionando una visión más completa de la historia natural de Sudamérica.</p>
     
     <h1>Hábitos Alimenticios y la Estructura Ecológica de las Especies Fósiles en Chile</h1>
-    <h2>Visualización Geográfica</h2>
+    <h2>Visualización Geográfica por tipo de alimentación</h2>
     <img src="data/graficos/chilea.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
     <p>
-        El análisis comienza con una visualización geográfica de los fósiles, donde se observa que las regiones costeras presentan 
-        una mayor concentración de restos fósiles. Este fenómeno puede explicarse por la presencia de depósitos sedimentarios marinos, 
-        que favorecen la fosilización. En contraste, las zonas interiores muestran una menor densidad de fósiles, probablemente debido 
-        a condiciones geológicas menos favorables.
+
+        El análisis inicia con una visualización geográfica de los fósiles, revelando que las regiones costeras presentan una mayor concentración de restos fósiles. Este fenómeno se puede atribuir a la presencia de depósitos sedimentarios marinos, que favorecen la fosilización. En contraste, las zonas interiores muestran una menor densidad de fósiles, probablemente debido a condiciones geológicas menos propicias.
+        
+        Además, se observa una notable cantidad de datos en la región de Atacama. En el centro de Chile, hay un aumento de consumidores primarios (representados en color verde), mientras que en el sur se identifican más consumidores secundarios y omnívoros. Esto podría sugerir la existencia de un ecosistema más complejo en el pasado.
+        
     </p>
-    <h2>Diversidad por Grupos de Dieta</h2>
-    <img src="data/graficos/graf30.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
-    <p>
-        Al analizar la densidad de fósiles según el tipo de dieta, se destacan patrones específicos:
-    </p>
-    <ol>
-        <li>
-            Filtros y suspensores: Muestran una alta densidad en las áreas costeras, lo que sugiere una relación 
-            con organismos marinos como moluscos o corales.
-        </li>
-        <li>
-            Consumidores primarios y secundarios: Presentan una distribución más uniforme en diversos ambientes, 
-            reflejando la presencia de herbívoros y carnívoros en zonas terrestres y costeras.
-        </li>
-        <li>
-            Omnívoros: Aunque dispersos, aparecen en áreas clave, lo que indica que tuvieron un rol menor pero significativo 
-            en ciertos ecosistemas.
-        </li>
-    </ol>
     <h3>Zonas Vacías y Factores Geológicos</h3>
     <p>
-        El análisis también revela la ausencia de fósiles en ciertas regiones del norte de Chile. Esto podría deberse a la aridez extrema, que dificulta la 
-        preservación, o a una falta de campañas paleontológicas en áreas de difícil acceso. Por otro lado, las regiones con mayor diversidad de fósiles parecen 
-        estar asociadas con depósitos sedimentarios ricos y condiciones climáticas históricamente favorables para la vida.
+            El análisis también revela la ausencia de fósiles en ciertas regiones del norte de Chile. Esto podría deberse a la aridez extrema, que dificulta la 
+            preservación, o a una falta de campañas paleontológicas en áreas de difícil acceso. Por otro lado, las regiones con mayor diversidad de fósiles parecen 
+            estar asociadas con depósitos sedimentarios ricos y condiciones climáticas históricamente favorables para la vida.
+    </p>
+    <h2>Graficando Atacama (Region con mas fosiles de Chile)</h2>
+    <img src="data/graficos/graf30.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
+    <p>
+        En nuestro análisis, notamos una clara dominancia de fósiles de consumidores secundarios (carnívoros), junto con una gran cantidad de fósiles de filtradores y suspensores. En las costas, se observa una mayor variedad de especies, incluyendo un mayor número de omnívoros. 
+        Como grupo, también hemos identificado que los fósiles tienden a distribuirse de forma lineal a lo largo de la región, destacando una notable presencia de fósiles acuáticos, especialmente aquellos que se alimentan por suspensión. 
+        Comentamos que esta distribución puede atribuirse a varios factores, como rutas de exploración ya definidas (como carreteras o ríos), condiciones específicas que favorecen la conservación de fósiles, o características territoriales propias de cada era.
     </p>
     <h2>Fósiles en Atacama: Un Caso Particular</h2>
     <img src="data/graficos/graf35.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
     <img src="data/graficos/graf31.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
+    <p>
+        Graficamos la distribución de los fósiles en las cinco principales eras geológicas, y observamos que efectivamente hay una relación entre las distribuciones y el tipo de territorio específico de cada era.
+        Esto se debe a que durante el Jurásico y el Cretácico, gran parte de lo que hoy es Atacama estuvo cubierta por mares someros, lo que explica la abundancia de fósiles marinos y su distribución en la región.
+    </p>
     <p>
         En la región de Atacama, se analizó la distribución de fósiles por era geológica. Durante el Jurásico y el Cretácico, gran parte de la región estaba 
         cubierta por mares someros, lo que explica la abundancia de fósiles marinos. Asimismo, los fósiles del Triásico están relacionados con ambientes 
@@ -297,26 +290,30 @@
         que exponen capas de roca en franjas definidas. Además, el esfuerzo de muestreo paleontológico en rutas accesibles, como carreteras o ríos, podría explicar 
         estos patrones lineales.
     </p>
+
     <h2>Clustering de Dietas con K-means</h2>
     <img src="data/graficos/graf49.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
     <p>
-        Para entender mejor los ecosistemas del pasado, se aplicó un análisis de clustering por dietas. El método del codo sugirió que tres clústeres eran ideales, 
-        destacando las siguientes características:
+        Para entender mejor los ecosistemas del pasado, se aplicó un análisis de clustering por la agrupacion de tipos de dietas (Carnívoros, Hebívoros, Omnívoros).
+        Como grupo tomamos la decicion de usar 3 clusters, basándonos en el metodo del codo. 
+    </p>
+    <img src="data/graficos/graf50.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
+    <p>
+        Los resultados del clustering nos mostro detalles como:
     </p>
     <ol>
         <li>
-            Clúster 0: Dominado por herbívoros (64.51%), lo que indica un entorno favorable para especies dependientes de recursos vegetales.
+            **Clúster 0:** Este clúster indica que en la zona norte de Chile predominan los fósiles herbívoros, representando un 64.51% del total, junto con un 33% de fósiles carnívoros. Esta distribución sugiere un ecosistema donde los herbívoros tenían un papel significativo en la cadena alimentaria.
         </li>
         <li>
-            Clúster 1: Predominan los carnívoros (58.68%), con una notable proporción de herbívoros, sugiriendo un ecosistema con un balance entre 
-            depredadores y presas.
+            **Clúster 1:** En la zona centro-sur de Chile, observamos que los fósiles carnívoros son predominantes, alcanzando un 58.7%. Esto podría reflejar un entorno más competitivo, donde los carnívoros se encontraban en mayor número, posiblemente debido a la disponibilidad de presas.
         </li>
         <li>
-            Clúster 2: Aunque los herbívoros también son mayoritarios (52.74%), los carnívoros tienen una presencia significativa (45.57%), indicando 
-            un ecosistema con interacciones complejas.
+            **Clúster 2:** En la zona centro de Chile, los fósiles herbívoros vuelven a ser predominantes, con un 52.78%. Esta tendencia sugiere que, a pesar de las variaciones regionales, los herbívoros continúan desempeñando un papel crucial en el ecosistema de esta área.
+            Luego los carnívoros en la zona tienen una presencia significativa (45.57%), indicando un ecosistema con interacciones complejas.
         </li>
     </ol>
-    <img src="data/graficos/graf50.png" alt="Plataforma Paleobiology Database" width="600" style="display: block; margin: 20px auto;">
+
     <p>
         En general, los omnívoros aparecen en menor proporción en los tres clústeres. Esto podría explicarse por varios factores, como la especialización de nichos 
         ecológicos, sesgos en el registro fósil o limitaciones en la clasificación de dietas. Además, las condiciones ambientales específicas de Chile probablemente 
@@ -324,7 +321,7 @@
     </p>
     <h2>Conclusión</h2>
     <p>
-        Este análisis destaca la importancia de las regiones costeras de Chile como reservorios de fósiles, especialmente de ambientes marinos. Las distribuciones 
+        Este análisis destaca la importancia de las regiones costeras de Chile como reservorios de fósiles, especialmente de ambientes marinos por lo tanto una alimentacion correspondiente. Las distribuciones 
         geográficas y dietéticas de los fósiles permiten reconstruir ecosistemas antiguos, mostrando la interacción entre diferentes grupos tróficos y los factores 
         ambientales que moldearon estos ecosistemas. La riqueza de los fósiles en el sur y las particularidades de Atacama proporcionan una visión valiosa sobre la 
         diversidad biológica y los cambios climáticos y geológicos a lo largo del tiempo.
